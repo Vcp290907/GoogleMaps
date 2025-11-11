@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "my-maps-app",
+    "name": "my-app-maps",
     "slug": "my-maps-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,15 +13,23 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "process.env.REACT_APP_GOOGLE_MAPS_API_KEY"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "config": {
+        "googleMaps": {
+          "apiKey": "process.env.REACT_APP_GOOGLE_MAPS_API_KEY"
+        }
+      }
     },
+    "edgeToEdgeEnabled": true,
     "web": {
       "favicon": "./assets/favicon.png"
     }
